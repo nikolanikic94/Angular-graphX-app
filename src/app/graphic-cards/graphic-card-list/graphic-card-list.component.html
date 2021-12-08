@@ -1,0 +1,8 @@
+<app-pagination
+  [collectionSize]="collectionSize"
+  (paginationEmitter)="updatePagination($event)"
+></app-pagination>
+
+<div class="row" *ngFor="let card of graphicCards">
+  <app-graphic-card-list-item [card]="card"></app-graphic-card-list-item>
+</div>

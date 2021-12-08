@@ -1,0 +1,41 @@
+<div class="row d-flex align-items-top mt-3 mb-3">
+  <div class="col-6">
+    <button
+      (click)="changePage(-1)"
+      [ngClass]="{ invisible: page <= 1 }"
+      class="btn btn-primary mr-1"
+    >
+      Prev
+    </button>
+    <button
+      (click)="changePage(+1)"
+      [ngClass]="{ invisible: page > collectionSize / pageSize }"
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <button
+      class="btn btn-secondary"
+      [ngClass]="{ active: pageSize === 5 }"
+      (click)="updatePagination(5)"
+    >
+      5
+    </button>
+    <button
+      class="btn btn-secondary"
+      [ngClass]="{ active: pageSize === 10 }"
+      (click)="updatePagination(10)"
+    >
+      10
+    </button>
+    <button
+      class="btn btn-secondary"
+      [ngClass]="{ active: pageSize === 20 }"
+      (click)="updatePagination(20)"
+    >
+      20
+    </button>
+  </div>
+</div>

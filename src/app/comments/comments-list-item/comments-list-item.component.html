@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row justify-content-between bg-success p-2">
+    <p class="font-weight-bold">{{ comment.$author }}</p>
+    <p>{{ comment.$date | date: "d.M.yyyy - HH:mm" }}</p>
+  </div>
+  <div class="row mb-2 bg-light p-2">
+    <p>{{ comment.$text }}</p>
+  </div>
+</div>
